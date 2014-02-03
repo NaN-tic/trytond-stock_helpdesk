@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!-- This file is part of the stock_helpdesk module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Groups -->
+        <record model="res.group" id="group_stock_helpdesk">
+            <field name="name">Helpdesk Stock</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_stock_helpdesk">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+        </record>
+
+        <!-- Helpdesk -->
+        <record model="ir.ui.view" id="helpdesk_view_form">
+            <field name="model">helpdesk</field>
+            <field name="inherit" ref="helpdesk.helpdesk_view_form"/>
+            <field name="name">helpdesk_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_stock_helpdesk_manager">
+            <field name="name">Stock Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'shipment')]</field>
+            <field name="context">{'kind': 'shipment'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_manager_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_stock_helpdesk_manager"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_manager_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_stock_helpdesk_manager"/>
+        </record>
+        <menuitem
+            parent="helpdesk.menu_helpdesk"
+            action="act_stock_helpdesk_manager"
+            id="menu_stock_helpdesk_manager"/>
+
+        <record model="ir.action.act_window" id="act_stock_helpdesk">
+            <field name="name">Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'shipment')]</field>
+            <field name="context">{'kind': 'shipment'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+        <menuitem
+            action="act_stock_helpdesk"
+            id="menu_stock_helpdesk"
+            parent="stock.menu_stock"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_stock_helpdesk">
+            <field name="menu" ref="menu_stock_helpdesk"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_unreads">
+            <field name="name">Unreads</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('unread','=',True),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_pending">
+            <field name="name">Pending</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('state', 'in', ['pending']), ('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_open">
+            <field name="name">Open</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', 'in', ['open']),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_all_my">
+            <field name="name">All My Helpdesks</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain">[('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_alls_stock_helpdesk">
+            <field name="name">All Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'shipment')]</field>
+            <field name="context">{'kind': 'shipment'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_view5">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stock_helpdesk_view6">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <menuitem
+            parent="menu_stock_helpdesk"
+            action="act_alls_stock_helpdesk"
+            id="menu_shipment_all_helpdesk"/>
+        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_helpdesk_shipment_manager">
+            <field name="menu" ref="menu_stock_helpdesk"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_stock_helpdesk_shipment_form">
+            <field name="name">Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'shipment'), ('shipments', '=', Eval('active_id'))]</field>
+            <field name="context">{'kind': 'shipment'}</field>
+        </record>
+        <record model="ir.action.keyword" id="act_open_stock_helpdesk_shipment_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">stock.shipment.out,-1</field>
+            <field name="action" ref="act_stock_helpdesk_shipment_form"/>
+        </record>
+
+        <!-- Access Helpdesk Stock -->
+        <record model="ir.model.access" id="access_stock_helpdesk">
+            <field name="model" search="[('model', '=', 'helpdesk')]"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_stock_helpdesk_talk">
+            <field name="model" search="[('model', '=', 'helpdesk.talk')]"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_stock_helpdesk_log">
+            <field name="model" search="[('model', '=', 'helpdesk.log')]"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>
