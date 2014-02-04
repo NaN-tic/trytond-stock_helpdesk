@@ -62,7 +62,7 @@ msgstr "Tots els meus suports"
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_open"
 msgid "Open"
-msgstr "Per obrir"
+msgstr "Oberts"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_pending"

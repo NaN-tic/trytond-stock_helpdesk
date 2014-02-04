@@ -62,7 +62,7 @@ msgstr "Todos mis soportes"
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_open"
 msgid "Open"
-msgstr "Abrir"
+msgstr "Abiertos"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_pending"
