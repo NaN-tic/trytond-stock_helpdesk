@@ -46,6 +46,10 @@ msgctxt "model:ir.action,name:act_stock_helpdesk"
 msgid "Helpdesks"
 msgstr "Soportes"
 
+msgctxt "model:ir.action,name:act_stock_helpdesk_form2"
+msgid "Shipment Helpdesks"
+msgstr "Soporte albaranes"
+
 msgctxt "model:ir.action,name:act_stock_helpdesk_manager"
 msgid "Stock Helpdesks"
 msgstr "Soportes de envío"
