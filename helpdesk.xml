@@ -85,6 +85,7 @@ copyright notices and license terms. -->
             <field name="menu" ref="menu_stock_helpdesk"/>
             <field name="group" ref="group_stock_helpdesk"/>
         </record>
+
         <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_unreads">
             <field name="name">Unreads</field>
             <field name="sequence" eval="10"/>
@@ -103,8 +104,14 @@ copyright notices and license terms. -->
             <field name="domain">[('state', 'in', ['open']),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
             <field name="act_window" ref="act_stock_helpdesk"/>
         </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', 'in', ['done']),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_stock_helpdesk"/>
+        </record>
         <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_all_my">
-            <field name="name">All My Helpdesks</field>
+            <field name="name">All</field>
             <field name="sequence" eval="40"/>
             <field name="domain">[('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
             <field name="act_window" ref="act_stock_helpdesk"/>
@@ -145,6 +152,37 @@ copyright notices and license terms. -->
             <field name="keyword">form_relate</field>
             <field name="model">stock.shipment.out,-1</field>
             <field name="action" ref="act_stock_helpdesk_shipment_form"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_unreads">
+            <field name="name">Unreads</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('unread','=',True)]</field>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_pending">
+            <field name="name">Pending</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('state', 'in', ['pending'])]</field>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_open">
+            <field name="name">Open</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', 'in', ['open'])]</field>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', 'in', ['done'])]</field>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_all_my">
+            <field name="name">All</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain">[]</field>
+            <field name="act_window" ref="act_alls_stock_helpdesk"/>
         </record>
 
         <!-- Access Helpdesk Stock -->
