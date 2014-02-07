@@ -59,9 +59,39 @@ msgid "Helpdesks"
 msgstr "Soportes"
 
 msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_alls_stock_helpdesk_all_my"
+msgid "All"
+msgstr "Todos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_alls_stock_helpdesk_done"
+msgid "Done"
+msgstr "Realizados"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_alls_stock_helpdesk_open"
+msgid "Open"
+msgstr "Abiertos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_alls_stock_helpdesk_pending"
+msgid "Pending"
+msgstr "Pendientes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_alls_stock_helpdesk_unreads"
+msgid "Unreads"
+msgstr "No leidos"
+
+msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_all_my"
-msgid "All My Helpdesks"
-msgstr "Todos mis soportes"
+msgid "All"
+msgstr "Todos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_done"
+msgid "Done"
+msgstr "Realizados"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_open"
