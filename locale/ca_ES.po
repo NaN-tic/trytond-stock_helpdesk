@@ -4,15 +4,15 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:helpdesk,shipments:"
 msgid "Stocks"
-msgstr "Emmagatzemats"
+msgstr "Albarans"
 
 msgctxt "field:shipment.out.helpdesk,create_date:"
 msgid "Create Date"
-msgstr "Data de creació"
+msgstr "Data creació"
 
 msgctxt "field:shipment.out.helpdesk,create_uid:"
 msgid "Create User"
-msgstr "Usuari de creació"
+msgstr "Usuari creació"
 
 msgctxt "field:shipment.out.helpdesk,helpdesk:"
 msgid "Helpdesk"
@@ -24,11 +24,11 @@ msgstr "ID"
 
 msgctxt "field:shipment.out.helpdesk,rec_name:"
 msgid "Name"
-msgstr "Nom del camp"
+msgstr "Nom"
 
 msgctxt "field:shipment.out.helpdesk,shipment:"
 msgid "Shipment Out"
-msgstr "Albarà de sortida"
+msgstr "Albarà client"
 
 msgctxt "field:shipment.out.helpdesk,write_date:"
 msgid "Write Date"
@@ -52,7 +52,7 @@ msgstr "Suport albarans"
 
 msgctxt "model:ir.action,name:act_stock_helpdesk_manager"
 msgid "Stock Helpdesks"
-msgstr "Suports d'enviaments"
+msgstr "Suports albarans"
 
 msgctxt "model:ir.action,name:act_stock_helpdesk_shipment_form"
 msgid "Helpdesks"
@@ -118,16 +118,16 @@ msgstr "Suports"
 
 msgctxt "model:ir.ui.menu,name:menu_stock_helpdesk_manager"
 msgid "Stock Helpdesks"
-msgstr "Suports d'enviaments"
+msgstr "Suports albarans"
 
 msgctxt "model:res.group,name:group_stock_helpdesk"
 msgid "Helpdesk Stock"
-msgstr "Suport d'enviaments"
+msgstr "Suport albarans"
 
 msgctxt "model:shipment.out.helpdesk,name:"
 msgid "Shipment Out - Helpdesk"
-msgstr "Suport d'albarà de sortida"
+msgstr "Suport- Albarà client"
 
 msgctxt "selection:helpdesk,kind:"
 msgid "Shipment Out"
-msgstr "Albarà de sortida"
+msgstr "Albarà client"

@@ -8,11 +8,11 @@ msgstr "Albarans"
 
 msgctxt "field:shipment.out.helpdesk,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:shipment.out.helpdesk,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:shipment.out.helpdesk,helpdesk:"
 msgid "Helpdesk"
