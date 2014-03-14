@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:helpdesk,shipments:"
 msgid "Stocks"
-msgstr "Albarans"
+msgstr "Albaranes"
 
 msgctxt "field:shipment.out.helpdesk,create_date:"
 msgid "Create Date"
@@ -85,7 +85,7 @@ msgstr "No leidos"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_all_my"
-msgid "All"
+msgid "Todos mis soportes"
 msgstr "Todos"
 
 msgctxt ""
