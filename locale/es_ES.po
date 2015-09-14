@@ -85,7 +85,7 @@ msgstr "No leidos"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_stock_helpdesk_domain_stock_helpdesk_all_my"
-msgid "Todos mis soportes"
+msgid "All"
 msgstr "Todos"
 
 msgctxt ""
