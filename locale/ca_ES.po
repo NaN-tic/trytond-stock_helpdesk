@@ -132,6 +132,10 @@ msgctxt "model:shipment.out.helpdesk,name:"
 msgid "Shipment Out - Helpdesk"
 msgstr "Suport- Albarà client"
 
+msgctxt "selection:getmail.server,kind:"
+msgid "Shipment Out"
+msgstr "Albarà client"
+
 msgctxt "selection:helpdesk,kind:"
 msgid "Shipment Out"
 msgstr "Albarà client"
