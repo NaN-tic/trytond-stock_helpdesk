@@ -68,6 +68,7 @@ copyright notices and license terms. -->
             action="act_stock_helpdesk_manager"
             id="menu_stock_helpdesk_manager"/>
 
+        <!-- Helpdesk by employee -->
         <record model="ir.action.act_window" id="act_stock_helpdesk">
             <field name="name">Helpdesks</field>
             <field name="res_model">helpdesk</field>
@@ -88,16 +89,6 @@ copyright notices and license terms. -->
             <field name="view" ref="helpdesk_view_form"/>
             <field name="act_window" ref="act_stock_helpdesk"/>
         </record>
-        <menuitem
-            action="act_stock_helpdesk"
-            id="menu_stock_helpdesk"
-            parent="stock.menu_stock"/>
-
-        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_stock_helpdesk">
-            <field name="menu" ref="menu_stock_helpdesk"/>
-            <field name="group" ref="group_stock_helpdesk"/>
-        </record>
-
         <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_stock_helpdesk_unreads">
             <field name="name">Unreads</field>
             <field name="sequence" eval="10"/>
@@ -139,6 +130,17 @@ copyright notices and license terms. -->
             <field name="act_window" ref="act_stock_helpdesk"/>
         </record>
 
+        <menuitem
+            action="act_stock_helpdesk"
+            id="menu_stock_helpdesk"
+            parent="stock.menu_stock"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_stock_helpdesk">
+            <field name="menu" ref="menu_stock_helpdesk"/>
+            <field name="group" ref="group_stock_helpdesk"/>
+        </record>
+
+        <!-- All helpdesks -->
         <record model="ir.action.act_window" id="act_alls_stock_helpdesk">
             <field name="name">All Helpdesks</field>
             <field name="res_model">helpdesk</field>
@@ -159,31 +161,6 @@ copyright notices and license terms. -->
             <field name="view" ref="helpdesk_view_form"/>
             <field name="act_window" ref="act_alls_stock_helpdesk"/>
         </record>
-        <menuitem
-            parent="menu_stock_helpdesk"
-            action="act_alls_stock_helpdesk"
-            id="menu_shipment_all_helpdesk"/>
-        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_helpdesk_shipment_manager">
-            <field name="menu" ref="menu_stock_helpdesk"/>
-            <field name="group" ref="group_stock_helpdesk"/>
-        </record>
-
-        <record model="ir.action.act_window" id="act_stock_helpdesk_shipment_form">
-            <field name="name">Helpdesks</field>
-            <field name="res_model">helpdesk</field>
-            <field name="domain"
-                eval="[('kind', '=', 'shipment'), ('shipments', '=', Eval('active_id'))]"
-                pyson="1"/>
-            <field name="context"
-                eval="{'kind': 'shipment'}"
-                pyson="1"/>
-        </record>
-        <record model="ir.action.keyword" id="act_open_stock_helpdesk_shipment_keyword1">
-            <field name="keyword">form_relate</field>
-            <field name="model">stock.shipment.out,-1</field>
-            <field name="action" ref="act_stock_helpdesk_shipment_form"/>
-        </record>
-
         <record model="ir.action.act_window.domain" id="act_stock_helpdesk_domain_alls_stock_helpdesk_unreads">
             <field name="name">Unreads</field>
             <field name="sequence" eval="10"/>
@@ -221,6 +198,15 @@ copyright notices and license terms. -->
             <field name="sequence" eval="40"/>
             <field name="domain"></field>
             <field name="act_window" ref="act_alls_stock_helpdesk"/>
+        </record>
+
+        <menuitem
+            parent="menu_stock_helpdesk"
+            action="act_alls_stock_helpdesk"
+            id="menu_shipment_all_helpdesk"/>
+        <record model="ir.ui.menu-res.group" id="menu_stock_helpdesk_group_helpdesk_shipment_manager">
+            <field name="menu" ref="menu_stock_helpdesk"/>
+            <field name="group" ref="group_stock_helpdesk"/>
         </record>
 
         <!-- Access Helpdesk Stock -->
