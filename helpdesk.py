@@ -44,6 +44,13 @@ class Helpdesk:
         if not value in cls.kind.selection:
             cls.kind.selection.append(value)
 
+    @classmethod
+    def view_attributes(cls):
+        return super(Helpdesk, cls).view_attributes() + [
+            ('//page[@id="shipments"]', 'states', {
+                    'invisible': ~Eval('kind').in_(['shipment', 'generic']),
+                    })]
+
 
 class ShipmentOutHelpdesk(ModelSQL):
     'Shipment Out - Helpdesk'

@@ -263,3 +263,7 @@ msgstr "Albarán cliente devolución - Soporte"
 msgctxt "selection:helpdesk,kind:"
 msgid "Shipments"
 msgstr "Albaranes"
+
+msgctxt "view:helpdesk:"
+msgid "Shipments"
+msgstr "Albaranes"
