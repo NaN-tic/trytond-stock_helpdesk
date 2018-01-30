@@ -37,5 +37,5 @@ copyright notices and license terms. -->
             <field name="model">stock.shipment.out.return,-1</field>
             <field name="action" ref="act_stock_shipment_out_return_helpdesk_form"/>
         </record>
-</data>
+    </data>
 </tryton>
