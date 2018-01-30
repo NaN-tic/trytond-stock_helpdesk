@@ -170,6 +170,14 @@ msgctxt "model:ir.action,name:act_stock_helpdesk_manager"
 msgid "Stock Helpdesks"
 msgstr "Suports albarans"
 
+msgctxt "model:ir.action,name:act_stock_shipment_in_helpdesk_form"
+msgid "Helpdesks"
+msgstr "Suports"
+
+msgctxt "model:ir.action,name:act_stock_shipment_in_return_helpdesk_form"
+msgid "Helpdesks"
+msgstr "Suports"
+
 msgctxt "model:ir.action,name:act_stock_shipment_out_helpdesk_form"
 msgid "Helpdesks"
 msgstr "Suports"
