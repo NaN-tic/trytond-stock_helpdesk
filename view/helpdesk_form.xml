@@ -6,5 +6,7 @@ copyright notices and license terms. -->
     <xpath expr="/form/notebook/page[@id='documents']" position="inside">
         <field name="shipments_out" colspan="4"/>
         <field name="shipments_out_return" colspan="4"/>
+        <field name="shipments_in" colspan="4"/>
+        <field name="shipments_in_return" colspan="4"/>
     </xpath>
 </data>

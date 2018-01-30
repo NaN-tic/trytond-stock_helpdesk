@@ -13,5 +13,7 @@ def register():
         helpdesk.Helpdesk,
         helpdesk.ShipmentOutHelpdesk,
         helpdesk.ShipmentOutReturnHelpdesk,
+        helpdesk.ShipmentInHelpdesk,
+        helpdesk.ShipmentInReturnHelpdesk,
         getmail.GetmailServer,
         module='stock_helpdesk', type_='model')
