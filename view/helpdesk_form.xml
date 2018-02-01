@@ -3,7 +3,12 @@
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
 <data>
-    <xpath expr="/form/notebook/page[@id=&quot;documents&quot;]" position="inside">
-        <field name="shipments" colspan="4"/>
+    <xpath expr="/form/notebook/page[@id='attachments']" position="after">
+        <page string="Shipments" id="shipments">
+            <field name="shipments_out" colspan="4"/>
+            <field name="shipments_out_return" colspan="4"/>
+            <field name="shipments_in" colspan="4"/>
+            <field name="shipments_in_return" colspan="4"/>
+        </page>
     </xpath>
 </data>
