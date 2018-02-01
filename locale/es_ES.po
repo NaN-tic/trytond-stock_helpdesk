@@ -2,21 +2,97 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "field:helpdesk,shipments:"
-msgid "Stocks"
-msgstr "Albaranes"
+msgctxt "field:helpdesk,shipments_in:"
+msgid "Shipments In"
+msgstr "Albaranes proveedor"
+
+msgctxt "field:helpdesk,shipments_in_return:"
+msgid "Shipments In Return"
+msgstr "Albaranes proveedor devolución"
+
+msgctxt "field:helpdesk,shipments_out:"
+msgid "Shipments Out"
+msgstr "Albaranes cliente"
+
+msgctxt "field:helpdesk,shipments_out_return:"
+msgid "Shipments Out Return"
+msgstr "Albaranes cliente devolución"
 
 msgctxt "field:helpdesk.configuration,smtp_shipment:"
 msgid "SMTP Shipments Server"
 msgstr "Servidor SMTP de envíos"
 
+msgctxt "field:shipment.in.helpdesk,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:shipment.in.helpdesk,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:shipment.in.helpdesk,helpdesk:"
+msgid "Helpdesk"
+msgstr "Soporte"
+
+msgctxt "field:shipment.in.helpdesk,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:shipment.in.helpdesk,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:shipment.in.helpdesk,shipment:"
+msgid "Shipment In"
+msgstr "Albarán proveedor"
+
+msgctxt "field:shipment.in.helpdesk,write_date:"
+msgid "Write Date"
+msgstr "Fecha de modificación"
+
+msgctxt "field:shipment.in.helpdesk,write_uid:"
+msgid "Write User"
+msgstr "Usuario de modificación"
+
+msgctxt "field:shipment.in.return.helpdesk,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:shipment.in.return.helpdesk,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:shipment.in.return.helpdesk,helpdesk:"
+msgid "Helpdesk"
+msgstr "Soporte"
+
+msgctxt "field:shipment.in.return.helpdesk,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:shipment.in.return.helpdesk,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:shipment.in.return.helpdesk,shipment:"
+msgid "Shipment In Return"
+msgstr "Albarán proveedor devolución"
+
+msgctxt "field:shipment.in.return.helpdesk,write_date:"
+msgid "Write Date"
+msgstr "Fecha de modificación"
+
+msgctxt "field:shipment.in.return.helpdesk,write_uid:"
+msgid "Write User"
+msgstr "Usuario de modificación"
+
 msgctxt "field:shipment.out.helpdesk,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:shipment.out.helpdesk,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:shipment.out.helpdesk,helpdesk:"
 msgid "Helpdesk"
@@ -36,11 +112,47 @@ msgstr "Albaranes cliente"
 
 msgctxt "field:shipment.out.helpdesk,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:shipment.out.helpdesk,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
+
+msgctxt "field:shipment.out.return.helpdesk,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:shipment.out.return.helpdesk,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:shipment.out.return.helpdesk,helpdesk:"
+msgid "Helpdesk"
+msgstr "Soporte"
+
+msgctxt "field:shipment.out.return.helpdesk,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:shipment.out.return.helpdesk,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:shipment.out.return.helpdesk,shipment:"
+msgid "Shipment Out Return"
+msgstr "Albarán cliente devolución"
+
+msgctxt "field:shipment.out.return.helpdesk,write_date:"
+msgid "Write Date"
+msgstr "Fecha de modificación"
+
+msgctxt "field:shipment.out.return.helpdesk,write_uid:"
+msgid "Write User"
+msgstr "Usuario de modificación"
+
+msgctxt "model:ir.action,name:"
+msgid "Helpdesks"
+msgstr "Soportes"
 
 msgctxt "model:ir.action,name:act_alls_stock_helpdesk"
 msgid "All Helpdesks"
@@ -58,7 +170,19 @@ msgctxt "model:ir.action,name:act_stock_helpdesk_manager"
 msgid "Stock Helpdesks"
 msgstr "Soportes de albaranes"
 
-msgctxt "model:ir.action,name:act_stock_helpdesk_shipment_form"
+msgctxt "model:ir.action,name:act_stock_shipment_in_helpdesk_form"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.action,name:act_stock_shipment_in_return_helpdesk_form"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.action,name:act_stock_shipment_out_helpdesk_form"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.action,name:act_stock_shipment_out_return_helpdesk_form"
 msgid "Helpdesks"
 msgstr "Soportes"
 
@@ -128,14 +252,26 @@ msgctxt "model:res.group,name:group_stock_helpdesk"
 msgid "Helpdesk Stock"
 msgstr "Soporte de albaranes"
 
+msgctxt "model:shipment.in.helpdesk,name:"
+msgid "Shipment In - Helpdesk"
+msgstr "Albarán proveedor - Soporte"
+
+msgctxt "model:shipment.in.return.helpdesk,name:"
+msgid "Shipment In Return - Helpdesk"
+msgstr "Albarán proveedor devolución - Soporte"
+
 msgctxt "model:shipment.out.helpdesk,name:"
 msgid "Shipment Out - Helpdesk"
 msgstr "Soporte - Albaranes"
 
-msgctxt "selection:getmail.server,kind:"
-msgid "Shipment Out"
-msgstr "Albaranes cliente"
+msgctxt "model:shipment.out.return.helpdesk,name:"
+msgid "Shipment Out Return - Helpdesk"
+msgstr "Albarán cliente devolución - Soporte"
 
 msgctxt "selection:helpdesk,kind:"
-msgid "Shipment Out"
-msgstr "Albaranes cliente"
+msgid "Shipments"
+msgstr "Albaranes"
+
+msgctxt "view:helpdesk:"
+msgid "Shipments"
+msgstr "Albaranes"
