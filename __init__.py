@@ -15,5 +15,8 @@ def register():
         helpdesk.ShipmentOutReturnHelpdesk,
         helpdesk.ShipmentInHelpdesk,
         helpdesk.ShipmentInReturnHelpdesk,
+        module='stock_helpdesk', type_='model')
+    Pool.register(
         getmail.GetmailServer,
+        depends=['getmail'],
         module='stock_helpdesk', type_='model')
