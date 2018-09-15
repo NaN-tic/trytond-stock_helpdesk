@@ -9,8 +9,7 @@ __all__ = ['Helpdesk', 'ShipmentOutHelpdesk', 'ShipmentOutReturnHelpdesk',
     'ShipmentInHelpdesk', 'ShipmentInReturnHelpdesk']
 
 
-class Helpdesk:
-    __metaclass__ = PoolMeta
+class Helpdesk(metaclass=PoolMeta):
     __name__ = 'helpdesk'
     shipments_out = fields.Many2Many('shipment.out.helpdesk', 'helpdesk',
         'shipment', 'Shipments Out', states={
